@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+.button {
+        display: flex;
+        flex-direction: row; /* Aligne les éléments côte à côte */
+        gap: 15px;           /* Espace constant entre chaque bouton */
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    /* Style individuel des boutons */
+    .button .button {
+        background-color: white;
+        border: 0;
+        padding: 20px 40px;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
+        font-size: 20px;
+        font-family: 'Inter', sans-serif;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .button .button:hover {
+        transform: translateY(-4px);
+        box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.2);
+        background-color: #f8f9fa;
+    }
+
+    .button .logo {
+    /* Dimensions explicites pour l'image */
+        width: 100px;
+        height: 100px;
+    
+    /* Supprime TOUTES les bordures et contours par défaut */
+        border: none;
+        outline: none;
+        background-color: transparent;
+    
+        /* Retrait du padding qui déformait le bloc */
+        padding: 0;
+        margin-left: 10px;
+        margin-top: 10px;
+
+    /* Gestion propre du fond */
+        background-image: url('Image/whats-gnu-2062451264.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .button a {
+        text-decoration: none;
+        outline: none;
+        border: none;
+    }
+
+    
+</style>
+</head>
+<body>
+    <div class="button">
+        <a href='/index.html'>
+        <button class="logo"></button>
+        </a>
+        <a href='/index.html'>
+        <button class="button">Home</button>
+        </a>
+        <a href='/Distribution/'>
+        <button class="button">News</button>
+        </a>
+        <button class="button">Contact</button>
+    </div>
+</body>
+</html>
