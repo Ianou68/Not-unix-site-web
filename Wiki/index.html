@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Not Unix</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="pagefind/pagefind-ui.css" rel="stylesheet">
-    <script src="pagefind/pagefind-ui.js"></script>
+    
+    <!-- Chemins mis à jour vers le dossier Wiki/pagefind -->
+    <link href="/Wiki/pagefind/pagefind-ui.css" rel="stylesheet">
+    <script src="/Wiki/pagefind/pagefind-ui.js"></script>
+
 <style>
     body {
         font-family: 'Inter', sans-serif;
@@ -117,16 +120,16 @@
 
     <div class="button">
         <a href='/index.html'>
-        <button class="logo"></button>
+            <button class="logo"></button>
         </a>
         <a href='/index.html'>
-        <button class="button">Home</button>
+            <button class="button">Home</button>
         </a>
         <a href='/Wiki/index.html'>
-        <button class="button">Wiki</button>
+            <button class="button">Wiki</button>
         </a>
         <a href='/Distribution/'>
-        <button class="button">Distribution</button>
+            <button class="button">Distribution</button>
         </a>
         <button class="button">Contact</button>
     </div>
@@ -138,6 +141,7 @@
         window.addEventListener('DOMContentLoaded', (event) => {
             new PagefindUI({ 
                 element: "#search", 
+                bundlePath: "/Wiki/pagefind/", /* Indique à Pagefind où trouver son index */
                 showSubResults: true 
             });
         });

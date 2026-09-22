@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "site:index": "pagefind --site Wiki"
+    "site:index": "npx pagefind --site Wiki"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Ianou68/Not-unix-site-web/issues"
   },
-  "homepage": "https://github.com/Ianou68/Not-unix-site-web#readme"
+  "homepage": "https://github.com/Ianou68/Not-unix-site-web#readme",
+  "devDependencies": {
+    "pagefind": "^1.5.2"
+  }
 }
