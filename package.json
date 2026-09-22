@@ -1,0 +1,21 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "site:index": "pagefind --site Wiki"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ianou68/Not-unix-site-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ianou68/Not-unix-site-web/issues"
+  },
+  "homepage": "https://github.com/Ianou68/Not-unix-site-web#readme"
+}

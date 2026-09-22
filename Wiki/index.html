@@ -7,8 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="pagefind/pagefind-ui.css" rel="stylesheet">
+    <script src="pagefind/pagefind-ui.js"></script>
 <style>
-.button {
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .button {
         display: flex;
         flex-direction: row; /* Aligne les éléments côte à côte */
         gap: 15px;           /* Espace constant entre chaque bouton */
@@ -37,11 +43,11 @@
     }
 
     .button .logo {
-    /* Dimensions explicites pour l'image */
+        /* Dimensions explicites pour l'image */
         width: 100px;
         height: 100px;
     
-    /* Supprime TOUTES les bordures et contours par défaut */
+        /* Supprime TOUTES les bordures et contours par défaut */
         border: none;
         outline: none;
         background-color: transparent;
@@ -51,8 +57,8 @@
         margin-left: 10px;
         margin-top: 10px;
 
-    /* Gestion propre du fond */
-        background-image: url('Image/whats-gnu-2062451264.jpg');
+        /* Gestion propre du fond */
+        background-image: url('/Image/whats-gnu-2062451264.jpg');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -64,10 +70,51 @@
         border: none;
     }
 
-    
+    /* --- Style Pagefind adapté aux boutons du site --- */
+    #search {
+        margin-top: 30px;
+        margin-left: 10px;
+        max-width: 900px;
+    }
+
+    :root {
+        --pagefind-ui-font: 'Inter', sans-serif;
+        --pagefind-ui-scale: 0.9;
+        --pagefind-ui-primary: #000000;
+        --pagefind-ui-text: #000000;
+        --pagefind-ui-background: #ffffff;
+        --pagefind-ui-border: #e2e8f0;
+        --pagefind-ui-border-width: 1px;
+        --pagefind-ui-border-radius: 4px;
+    }
+
+    /* Input de recherche avec ombre comme les boutons */
+    .pagefind-ui .pagefind-ui__search-input {
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+        border: none;
+        font-weight: 400;
+    }
+
+    .pagefind-ui .pagefind-ui__search-input:focus {
+        outline: 2px solid #000;
+    }
+
+    /* Carte de résultats globale */
+    .pagefind-ui .pagefind-ui__results-area {
+        margin-top: 20px;
+    }
+
+    .pagefind-ui .pagefind-ui__result {
+        background-color: white;
+        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.08);
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+    }
 </style>
 </head>
 <body>
+
     <div class="button">
         <a href='/index.html'>
         <button class="logo"></button>
@@ -83,5 +130,17 @@
         </a>
         <button class="button">Contact</button>
     </div>
+
+    <!-- Barre de recherche -->
+    <div id="search"></div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ 
+                element: "#search", 
+                showSubResults: true 
+            });
+        });
+    </script>
 </body>
 </html>
